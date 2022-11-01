@@ -1,0 +1,19 @@
+.item {
+  position: relative;
+  padding: 13px 16px 27px;
+  border-radius: 8px;
+  background-color: var(--color-bg-jobs-mobile);
+  box-shadow: var(--shadow-jobs-mobile);
+}
+
+.item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1920px) {
+  .item {
+    padding: 24px 16px;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-jobs-desktop);
+  }
+}
