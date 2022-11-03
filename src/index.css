@@ -1,5 +1,6 @@
 @import 'modern-normalize/modern-normalize.css';
 @import url('./fonts/proxima-nova/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
   --color-white: #ffffff;
   --color-dark-main: #384564;
@@ -7,18 +8,43 @@
   --color-bg-body: #e6e9f2;
   --color-bg-jobs-mobile: #eff0f5;
   --color-rating-unchosen: #b2b4ba;
+  --color-icons-detailed: #70778b;
+  --color-yellow-light: #ffcf0026;
+  --color-yellow-dark: #ffcf00;
+  --color-blue-dark: #55699e4d;
+  --color-blue-light: #a1b1db51;
+  --color-contacts: #2a3047;
+  --color-contacts-location: #d8d8d8;
+  --color-pagination-inActive: #38415d9a;
+  --color-pagination-active: #5876c5;
+  --color-pagination-border-mobile: #38415d0d;
+  --color-pagination-border-desktop: #dee3ef;
 
   --color-text-light-gray: #878d9d;
   --color-text-accent: #3a4562;
+  --color-text-support: #38415dd1;
+  --color-text-posted-mobile: #38415d99;
+  --color-text-posted-desktop: #38415d5b;
+  --color-text-yellow: #988b49;
+  --color-text-blue: #55699e;
+  --color-text-contacts: #e7eaf0;
+  --color-text-contacts-support: #ffffffab;
+  --color-text-contacts-desktop: #e8ebf3;
+  --color: #dee3ef;
 
   --shadow-jobs-mobile: 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
   --shadow-jobs-desktop: 2px 1px 7px rgba(0, 0, 0, 0.08),
+    0px 2px 1px -1px #0000000a, 0px 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-pagination-mobile: 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-pagination-desktop: 2px 1px 7px rgba(0, 0, 0, 0.08),
     0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
 
   --font-main: 'Proxima Nova Rg';
   --font-thin: 'Proxima Nova Th';
   --font-bold: 'Proxima Nova Bl';
+  --font-job-detailed: 'Roboto';
 }
 
 body {
@@ -51,4 +77,8 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  cursor: pointer;
 }

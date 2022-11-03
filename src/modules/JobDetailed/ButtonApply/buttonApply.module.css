@@ -1,0 +1,22 @@
+.btn {
+  display: block;
+  min-width: 116px;
+  max-width: 250px;
+  margin: 0 auto 135px;
+  padding: 18px 30px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-dark-main);
+}
+
+@media screen and (min-width: 1920px) {
+  .btn {
+    min-width: 127px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}

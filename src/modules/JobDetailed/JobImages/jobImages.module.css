@@ -1,0 +1,38 @@
+.general {
+  margin-bottom: 64px;
+}
+
+.subheader {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-text-accent);
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: 0.41px;
+  font-weight: 700;
+}
+
+.list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.item {
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: top;
+}
+@media screen and (min-width: 1920px) {
+  .general {
+    margin-bottom: 98px;
+  }
+  .subheader {
+    padding-bottom: 9px;
+    margin-bottom: 21px;
+  }
+  .list {
+    flex-wrap: wrap;
+  }
+}

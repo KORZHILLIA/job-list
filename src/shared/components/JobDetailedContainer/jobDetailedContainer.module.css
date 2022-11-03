@@ -2,16 +2,18 @@
   width: 100%;
   padding: 24px 15px 37px;
   margin: 0 auto;
+  background-color: var(--color-white);
 }
 
 @media screen and (min-width: 414px) {
   .container {
-    max-width: 383px;
+    max-width: 414px;
   }
 }
 
 @media screen and (min-width: 1920px) {
   .container {
+    position: relative;
     max-width: 1258px;
     padding: 56px 10px 89px;
   }

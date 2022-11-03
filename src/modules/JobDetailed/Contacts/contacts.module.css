@@ -1,0 +1,62 @@
+.general {
+  width: 100%;
+  padding: 31px 62px 28px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: var(--color-contacts);
+  color: var(--color-text-contacts);
+}
+
+.department {
+  margin-bottom: 14px;
+  line-height: 1.19;
+  letter-spacing: 0.23px;
+  font-weight: 700;
+}
+
+.address,
+.phone {
+  line-height: 1.44;
+  letter-spacing: -0.5px;
+}
+
+.address {
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.location {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: var(--color-contacts-location);
+}
+
+.addressText {
+  text-indent: 22px;
+}
+
+.phone {
+  color: var(--color-text-contacts-support);
+}
+
+@media screen and (min-width: 1920px) {
+  .general {
+    padding-bottom: 20px;
+  }
+  .department {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.63px;
+    font-weight: 700;
+  }
+  .address,
+  .phone {
+    font-family: var(--font-job-detailed);
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.56px;
+    color: var(--color-text-contacts-desktop);
+  }
+}

@@ -1,0 +1,47 @@
+.general {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  line-height: 1.44;
+  letter-spacing: -0.5px;
+  color: var(--color-text-support);
+}
+
+.saveToList,
+.share {
+  display: flex;
+  align-items: center;
+}
+
+.saveToListIcon,
+.shareIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saveToListIcon {
+  margin-right: 12px;
+  fill: none;
+  stroke: var(--color-text-accent);
+  stroke-width: 2px;
+}
+
+.shareIcon {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 1920px) {
+  .general {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.56px;
+  }
+  .saveToListIcon {
+    stroke: var(--color-icons-detailed);
+  }
+
+  .shareIcon {
+    fill: var(--color-icons-detailed);
+  }
+}

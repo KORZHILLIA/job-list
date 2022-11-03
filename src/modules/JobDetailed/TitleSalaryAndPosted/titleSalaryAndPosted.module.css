@@ -1,0 +1,83 @@
+.general {
+  margin-top: 32px;
+  margin-bottom: 14px;
+  color: var(--color-text-accent);
+}
+
+.upper,
+.lower {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin-bottom: 5px;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.75px;
+}
+
+.salary {
+  display: flex;
+  flex-direction: column;
+  column-gap: 4px;
+}
+
+.brutto {
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.56px;
+  color: var(--color-text-support);
+}
+
+.money {
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.63px;
+}
+
+.lower {
+  align-items: center;
+}
+
+.posted {
+  font-family: var(--font-thin);
+  font-size: 13px;
+  line-height: 1.92;
+  letter-spacing: 0.19px;
+  color: var(--color-text-posted-mobile);
+}
+
+@media screen and (min-width: 1920px) {
+  .general {
+    margin-bottom: 7px;
+  }
+
+  .upper {
+    align-items: flex-start;
+  }
+
+  .title {
+    margin-bottom: 7px;
+    max-width: 501px;
+  }
+
+  .salary {
+    flex-direction: column-reverse;
+    column-gap: 1px;
+  }
+
+  .brutto {
+    color: var(--color-text-accent);
+  }
+
+  .posted {
+    font-family: var(--font-job-detailed);
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.56px;
+    color: var(--color-text-posted-desktop);
+  }
+}

@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-const googleKey = 'AIzaSyA0Wd9ki4G0dUSCfDMgC2rqSA6WPi6SwQk';
 const BIGDATA_KEY = 'bdc_039d5fe4d0a542fe9c38f9ad5a068b36';
 
 const instance = axios.create({

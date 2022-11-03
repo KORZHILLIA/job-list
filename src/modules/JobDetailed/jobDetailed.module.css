@@ -1,0 +1,65 @@
+.description {
+  font-size: 18px;
+  line-height: 1.33;
+  color: var(--color-text-support);
+  margin-bottom: 43px;
+}
+
+.subheader {
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.62px;
+  color: var(--color-text-accent);
+}
+
+.btn {
+  margin-bottom: 135px;
+}
+
+.responsibilities {
+  composes: description;
+  margin-bottom: 22px;
+}
+
+.infoAndImg {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  width: 372px;
+}
+
+@media screen and (min-width: 1920px) {
+  .general {
+    max-width: 723px;
+  }
+
+  .description {
+    font-family: var(--font-job-detailed);
+    color: var(--color-text-accent);
+    margin-bottom: 50px;
+  }
+
+  .btn {
+    margin-bottom: 86px;
+  }
+
+  .responsibilities {
+    margin-bottom: 36px;
+  }
+
+  .infoAndImg {
+    flex-direction: column-reverse;
+  }
+
+  .contacts {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 402px;
+  }
+}

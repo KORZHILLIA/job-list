@@ -1,0 +1,29 @@
+.list {
+  margin-bottom: 25px;
+  list-style: square;
+  list-style-position: inside;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.56px;
+  color: var(--color-text-support);
+}
+
+.item::marker {
+  margin-right: 24px;
+}
+
+@media screen and (min-width: 1920px) {
+  body {
+    background-color: #fff;
+  }
+
+  .list {
+    margin-bottom: 39px;
+    list-style-position: outside;
+    font-family: var(--font-job-detailed);
+  }
+
+  .item::marker {
+    margin-right: 11px;
+  }
+}
