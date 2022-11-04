@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import Spinner from 'shared/components/Spinner';
 import DefaultMarker from './DefaultMarker';
@@ -44,6 +45,17 @@ const Map = ({ center }) => {
   ) : (
     <Spinner />
   );
+};
+
+Map.defaultProps = {
+  center: { lat: 0, lng: 0 },
+};
+
+Map.propTypes = {
+  center: PropTypes.exact({
+    lat: PropTypes.number,
+    lng: PropTypes.number,
+  }).isRequired,
 };
 
 export default Map;

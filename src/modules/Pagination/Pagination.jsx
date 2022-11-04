@@ -1,3 +1,5 @@
+import { memo, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import SVGCreator from 'shared/components/SVGCreator';
 import styles from './pagination.module.css';
@@ -9,29 +11,35 @@ const Pagination = ({ total, onClick }) => {
   const rest = total - number;
   const currentCoeff = 5 * startWith;
 
-  const changePortion = idx => {
-    setCurrentPage(idx);
-    onClick(idx);
-  };
+  const changePortion = useCallback(
+    idx => {
+      setCurrentPage(idx);
+      onClick(idx);
+    },
+    [onClick]
+  );
 
-  const changeList = direction => {
-    setStartWith(prevState => {
-      if (direction === 'back') {
-        changePortion((prevState - 1) * 5);
-        return prevState - 1;
-      }
-      if (prevState >= total / 5) {
-        return prevState;
-      }
-      changePortion((prevState + 1) * 5);
-      return prevState + 1;
-    });
-  };
+  const changeList = useCallback(
+    direction => {
+      setStartWith(prevState => {
+        if (direction === 'back') {
+          changePortion((prevState - 1) * 5);
+          return prevState - 1;
+        }
+        if (prevState >= total / 5) {
+          return prevState;
+        }
+        changePortion((prevState + 1) * 5);
+        return prevState + 1;
+      });
+    },
+    [changePortion, total]
+  );
 
-  const setLastPage = () => {
+  const setLastPage = useCallback(() => {
     changePortion(total - 1);
     setStartWith(total / 5 - 1);
-  };
+  }, [changePortion, total]);
   const elements = Array(
     !rest ? number : total - currentCoeff > 5 ? 5 : total - currentCoeff
   )
@@ -72,7 +80,6 @@ const Pagination = ({ total, onClick }) => {
               className={
                 currentPage === total - 1 ? styles.itemActive : styles.item
               }
-              //   onClick={() => changePortion(total - 1)}
               onClick={setLastPage}
             >
               {total}
@@ -88,4 +95,14 @@ const Pagination = ({ total, onClick }) => {
   );
 };
 
-export default Pagination;
+Pagination.defaultProps = {
+  total: 0,
+  onClick: () => {},
+};
+
+Pagination.propTypes = {
+  total: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+export default memo(Pagination);

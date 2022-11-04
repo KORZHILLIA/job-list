@@ -1,0 +1,26 @@
+.btn,
+.arrowContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  position: absolute;
+  bottom: 162px;
+  left: -91px;
+  padding: 16px 26px;
+  padding-left: 23px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text-accent);
+  background-color: var(--color-text-contacts-desktop);
+}
+
+.arrowContainer {
+  margin-right: 19px;
+}

@@ -1,3 +1,5 @@
+import { memo } from 'react';
+import PropTypes from 'prop-types';
 import SVGCreator from '../SVGCreator';
 
 const IconGenerator = ({
@@ -19,4 +21,17 @@ const IconGenerator = ({
   return <ul className={listStyle}>{elements}</ul>;
 };
 
-export default IconGenerator;
+IconGenerator.defaultProps = {
+  number: 2,
+};
+
+IconGenerator.propTypes = {
+  number: PropTypes.number.isRequired,
+  iconName: PropTypes.string.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  iconStyle: PropTypes.string.isRequired,
+  listStyle: PropTypes.string.isRequired,
+};
+
+export default memo(IconGenerator);

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchAllJobs } from 'shared/api/jobs-api';
 import { addJobs } from 'redux/jobs/jobs-actions';
@@ -6,6 +6,7 @@ import JobListContainer from 'shared/components/JobListContainer';
 import JobsList from 'modules/JobsList';
 import Pagination from 'modules/Pagination';
 import Spinner from 'shared/components/Spinner';
+import styles from './jobListPage.module.css';
 
 const initialFetchState = {
   jobs: [],
@@ -48,9 +49,13 @@ const JobListPage = () => {
   }, [dispatch, portionSize]);
 
   const isJobs = jobs.length > 0;
-  const currentJobs = jobs.slice(
-    currentPortion * portionSize,
-    portionSize * (currentPortion + 1)
+  const currentJobs = useMemo(
+    () =>
+      jobs.slice(
+        currentPortion * portionSize,
+        portionSize * (currentPortion + 1)
+      ),
+    [currentPortion, jobs, portionSize]
   );
 
   const setCurrentPortion = currentPortion =>
@@ -59,9 +64,9 @@ const JobListPage = () => {
   return (
     <JobListContainer>
       {loading && <Spinner />}
-      {error && <p>{error}</p>}
-      {isJobs && <JobsList items={currentJobs} />}
-      {isJobs && (
+      {error && <p className={styles.error}>{error}</p>}
+      {!error && isJobs && <JobsList items={currentJobs} />}
+      {!error && isJobs && (
         <Pagination total={totalPortions} onClick={setCurrentPortion} />
       )}
     </JobListContainer>

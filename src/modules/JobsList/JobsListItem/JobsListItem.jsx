@@ -1,3 +1,5 @@
+import { memo } from 'react';
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SVGCreator from 'shared/components/SVGCreator';
@@ -85,4 +87,19 @@ const JobsListItem = ({
   );
 };
 
-export default JobsListItem;
+JobsListItem.defaultProps = {
+  latitude: 0,
+  longitude: 0,
+};
+
+JobsListItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  picture: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  latitude: PropTypes.number.isRequired,
+  longitude: PropTypes.number.isRequired,
+  term: PropTypes.string.isRequired,
+};
+
+export default memo(JobsListItem);

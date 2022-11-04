@@ -7,6 +7,7 @@ import JobDetailedContainer from 'shared/components/JobDetailedContainer';
 import JobDetailed from 'modules/JobDetailed';
 import PersonalActivity from 'modules/JobDetailed/PersonalActivity';
 import ButtonApply from 'modules/JobDetailed/ButtonApply';
+import ButtonBackToBoard from './ButtonBackToBoard';
 import styles from './jobDetailedPage.module.css';
 
 const JobDetailedPage = () => {
@@ -23,6 +24,7 @@ const JobDetailedPage = () => {
       </div>
       {bigger1920px && <ButtonApply text="Apply now" type="button" />}
       <JobDetailed job={job} />
+      {bigger1920px && <ButtonBackToBoard text="RETURN TO JOB BOARD" />}
     </JobDetailedContainer>
   );
 };

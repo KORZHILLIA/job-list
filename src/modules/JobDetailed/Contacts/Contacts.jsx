@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import SVGCreator from 'shared/components/SVGCreator';
 import styles from './contacts.module.css';
 
@@ -20,6 +21,20 @@ const Contacts = ({ name, address, email, phone }) => {
       </div>
     </div>
   );
+};
+
+Contacts.defaultProps = {
+  name: '',
+  address: '',
+  email: '',
+  phone: '',
+};
+
+Contacts.propTypes = {
+  name: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
 };
 
 export default Contacts;

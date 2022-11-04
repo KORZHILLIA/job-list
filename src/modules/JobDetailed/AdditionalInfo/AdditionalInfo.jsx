@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './additionalInfo.module.css';
 
 const AdditionalInfo = ({ benefits, employmentTypes }) => {
@@ -21,6 +22,16 @@ const AdditionalInfo = ({ benefits, employmentTypes }) => {
       <ul className={styles.benefitList}>{benefitsElements}</ul>
     </div>
   );
+};
+
+AdditionalInfo.defaultProps = {
+  benefits: [],
+  employmentTypes: [],
+};
+
+AdditionalInfo.propTypes = {
+  benefits: PropTypes.arrayOf(PropTypes.string).isRequired,
+  employmentTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default AdditionalInfo;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './jobImages.module.css';
 
 const JobImages = ({ images, alt }) => {
@@ -18,6 +19,15 @@ const JobImages = ({ images, alt }) => {
       <ul className={styles.list}>{elements}</ul>
     </div>
   );
+};
+
+JobImages.defaultProps = {
+  images: [],
+};
+
+JobImages.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  alt: PropTypes.string.isRequired,
 };
 
 export default JobImages;

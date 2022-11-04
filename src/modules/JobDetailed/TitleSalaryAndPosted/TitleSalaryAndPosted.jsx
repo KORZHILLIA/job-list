@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import useBreakpoints from 'shared/hooks/useBreakpoints';
 import defineTerm from 'helpers/defineTerm';
 import styles from './titleSalaryAndPosted.module.css';
@@ -24,6 +25,16 @@ const TitleSalaryAndPosted = ({ title, salary, term }) => {
       </div>
     </div>
   );
+};
+
+TitleSalaryAndPosted.defaultProps = {
+  salary: '10k-20k',
+};
+
+TitleSalaryAndPosted.propTypes = {
+  title: PropTypes.string.isRequired,
+  salary: PropTypes.string.isRequired,
+  term: PropTypes.string.isRequired,
 };
 
 export default TitleSalaryAndPosted;

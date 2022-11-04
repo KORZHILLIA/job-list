@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import PersonalActivity from './PersonalActivity';
 import TitleSalaryAndPosted from './TitleSalaryAndPosted';
 import Benefits from './Benefits';
@@ -53,6 +54,31 @@ const JobDetailed = ({ job }) => {
       </div>
     </div>
   );
+};
+
+JobDetailed.defaultProps = {
+  job: {},
+};
+
+JobDetailed.propTypes = {
+  job: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    address: PropTypes.string.isRequired,
+    benefits: PropTypes.arrayOf(PropTypes.string).isRequired,
+    description: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    employment_type: PropTypes.arrayOf(PropTypes.string).isRequired,
+    location: PropTypes.exact({
+      lat: PropTypes.number.isRequired,
+      long: PropTypes.number.isRequired,
+    }).isRequired,
+    name: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+    salary: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    updatedAt: PropTypes.string.isRequired,
+  }),
 };
 
 export default JobDetailed;
