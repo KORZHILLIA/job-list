@@ -8,23 +8,24 @@ homeworks in GoIT School
 
 ## Features
 
-1. Entire jobs list is loaded at once but results are shown restricted
+1. This project is completely own. Other contributors are shown by default.
+2. Entire jobs list is loaded at once but results are shown restricted
    intentionally as pagination mechanics was performed.
-2. The implementation was thoroughly including some strange detailes as cutted
+3. The implementation was thoroughly including some strange detailes as cutted
    image in JobDetailed mobile version.
-3. The absence of custom marker on map, presence of excessive elements and
+4. The absence of custom marker on map, presence of excessive elements and
    unknown zoom value are unknown and will be researched.
-4. As Tailwind framework is unstudied, all the styles were done by native css,
+5. As Tailwind framework is unstudied, all the styles were done by native css,
    but please don't doubt of ability to use scss as well as to learn framework
    mentioned.
-5. 'id' prop of PersonalActivity component was added for possible extending of
+6. 'id' prop of PersonalActivity component was added for possible extending of
    current project.
-6. Unaccordance of Save to my list icon in JobDetailed mobile version is
+7. Unaccordance of Save to my list icon in JobDetailed mobile version is
    explained by the malfunction of original icon.
-7. Pagination logics is totally personal, so maybe it has lack, but it works
+8. Pagination logics is totally personal, so maybe it has lack, but it works
    correctly.
-8. Pagination arrows that are absent in mobile version model were added
+9. Pagination arrows that are absent in mobile version model were added
    intentionally.
-9. New way of new component creation process was invented (createComponent.js).
+10. New way of new component creation process was invented (createComponent.js).
 
 ## Thanx for your attention and I hope of further communications.
