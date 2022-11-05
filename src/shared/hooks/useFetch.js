@@ -16,7 +16,7 @@ const useFetch = ({ initialState, fetchFunction, query = '' }) => {
       }
     };
     getItems();
-  }, [query]);
+  }, [fetchFunction, query]);
 
   return { state, setState };
 };
