@@ -25,5 +25,6 @@ homeworks in GoIT School
    correctly.
 8. Pagination arrows that are absent in mobile version model were added
    intentionally.
+9. New way of new component creation process was invented (createComponent.js).
 
 ## Thanx for your attention and I hope of further communications.
