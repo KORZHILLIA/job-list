@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkjob_list=self.webpackChunkjob_list||[]).push([[591],{2591:function(n,a,e){e.r(a),e.d(a,{default:function(){return u}});var s=e(1087),t="notFoundPage_container__JbSd1",o="notFoundPage_warn__8KuKh",c="notFoundPage_back__fNwVW",i=e(184),u=function(){return(0,i.jsxs)("div",{className:t,children:[(0,i.jsx)("p",{className:o,children:"This page is not found"}),(0,i.jsx)(s.rU,{className:c,to:"/job-list",children:"Back to main page"})]})}}}]);
+//# sourceMappingURL=591.e98ceba6.chunk.js.map
