@@ -1,0 +1,28 @@
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.warn,
+.back {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.warn {
+  margin-bottom: 50px;
+}
+
+.back {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 30px;
+  color: var(--color-text-accent);
+  background-color: var(--color-blue-light);
+}
