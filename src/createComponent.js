@@ -16,14 +16,14 @@ rl.on('line', async folderNames => {
   const componentPath = path.join(__dirname, ...splittedLine);
   const baseName = splittedLine.at(-1);
   const lowCaseName = baseName[0].toLowerCase() + baseName.slice(1);
+  const cssModule = `${lowCaseName}.module.css`;
   try {
-    await fs.mkdir(componentPath);
+    await fs.mkdir(componentPath, { recursive: true });
     await fs.writeFile(
       `${componentPath}/${baseName}.jsx`,
-      `const ${baseName} = () => {};\n\nexport default ${baseName};`
+      `import styles from './${cssModule}'\n\nconst ${baseName} = () => {};\n\nexport default ${baseName};`
     );
-    console.log('haha');
-    await fs.writeFile(`${componentPath}/${lowCaseName}.module.css`, '');
+    await fs.writeFile(`${componentPath}/${cssModule}`, '');
     await fs.writeFile(
       `${componentPath}/index.js`,
       `export {default} from './${baseName}';`
